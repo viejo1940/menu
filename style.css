@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:linear-gradient(#086b99,#4d055f);
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+section{
+    background: url('stars1.png');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+ul{
+    text-align: center;
+
+}
+ul:hover li a{
+    opacity: 0;
+}
+ul li{
+    list-style: none;
+    margin: 15px 0;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    background:darkblue;
+    padding: 6px 10px;
+    border-radius:20px ;
+    display: inline-block;
+    text-transform: uppercase;
+    width: 130px ;
+    transition: 0.5s;
+    position: relative;
+    z-index: 10 ; 
+    
+     
+     
+}
+ul li a:hover{
+    transform: scale(1.5);
+    background:darkred;
+    opacity: 1;
+}
+ul li::after{
+    content: attr(data-text);
+    color:white;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+    font-size: 80px;
+    font-weight: 800;
+    text-transform: uppercase;
+    opacity: 0;
+    letter-spacing: 40px;
+    pointer-events: none ; 
+    transition: 0.5s;
+}
+ul li:hover:after{
+    opacity: 1;
+    letter-spacing: 4px;
+
+}
+ul li::before{
+    content: '';
+    width: 180px;
+    height: 80px;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,70%);
+    border-radius: 50%;
+   box-shadow: 0 0 90px orangered;
+    opacity: 0;
+    transition: 0.5s;
+}
+ul li:hover:before{
+    opacity: 1;
+    width: 80px;
+    
+    
+}
